@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource
+	username="root" 
+	password="draco4prez"
+	url="jdbc:mysql://localhost:3306/footballfield?createDatabaseIfNotExist=true"		
+	name="jdbc/footballfield"
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="com.mysql.jdbc.Driver"
+	maxActive="15" 
+	maxIdle="4"
+	/>
+</Context>

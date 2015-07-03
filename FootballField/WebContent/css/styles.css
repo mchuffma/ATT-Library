@@ -1,0 +1,110 @@
+  @font-face {
+    font-family: 'EH';
+    src: url("../font/ehsmb.eot");
+    src: url("../font/ehsmb.eot") format("embedded-opentype"),
+    url("../font/ehsmb.woff2") format("woff2"),
+    url("../font/ehsmb.woff") format("woff"),
+    url("../font/ehsmb.ttf") format("truetype"),
+    url("../font/ehsmb.svg#ElectronicHighwaySignRegular") format("svg");
+  }
+div.background{
+  background-image: url("../img/final-field1.png");
+  background-size: 100% 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+div.container{
+  position:absolute;
+  bottom: 26%;
+  height: 48%;
+  width: 100%;
+  z-index: 1;
+}
+div#red_sea{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #CC0000;
+  height: 50%;
+}
+
+canvas#animated_sea{
+	position:absolute;
+	top: -6px;
+}
+div#scoreboard {
+  position: absolute;
+  top: 8.4%;
+  left: 36%;
+  width: 29.2%;
+  height: 11%;
+  z-index: 5;
+  font-size: 3.4em;
+  font-family: 'EH';
+  color: #fff7a3;
+}
+div#left_score {
+  float: left;
+  width: 27%;
+  height: 100%;
+  text-align: center;
+}
+div#am_pm {
+  float: left;
+  width: 46%;
+  height: 100%;
+}
+div#am_pm div {
+  background: url("../img/am-pm.png") no-repeat;
+  background-position: 51% 73%;
+  background-size: 41%;
+}
+div#am {
+  float:left;
+  height: 100%;
+  width: 50%;
+  
+}
+div#pm {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+div#right_score {
+  float: left;
+  width:27%;
+  height: 100%;
+  text-align: center;
+}
+div#time {
+  position: absolute;
+  height: 5%;
+  top: 2.5%;
+  width: 11%;
+  z-index: 6;
+  font-size: 3em;
+  left: 45%;
+  font-family: 'EH';
+  color: #fff7a3;
+  display: block;
+  text-align: center;
+}
+
+img{
+  z-index: 3;
+  width: 3%;
+  position: absolute;
+  left: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

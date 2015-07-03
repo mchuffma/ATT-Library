@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript" src="./js/libs/class.js"></script>
+<script type="text/javascript" src="./js/libs/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./js/Droplets.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var manager = new DropManager({
+    width: 800,
+    height: 500
+  }, $("body"));
+  var $add = $("<button>").html("Add Drop");
+  var $add100 = $("<button>").html("Add 100 Drops");
+  var $clear = $("<button>").html("Clear Frame");
+  $add.on("click", function(){
+    manager.addRandomDrop();
+  });
+  
+  $add100.on("click", function(){
+    for(var i = 0; i < 100; i++){
+      manager.addRandomDrop();
+    }
+  });
+  
+  $clear.on("click", function(){
+    manager.clear();
+  });
+  
+  $("body").append($add);
+  $("body").append($add100);
+  $("body").append($clear);
+  
+  //Randomly add and remove drops.
+  var removeRandomly = function(){
+	  manager.removeDrop();
+	  setTimeout(removeRandomly,
+			  (randInt(15) + 30 * 1000))
+  }
+  var addRandomly = function(){
+	  manager.addRandomDrop();
+	  setTimeout(addRandomly,
+			  (randInt(15) + 5 * 1000))
+  }
+  addRandomly();
+  removeRandomly();
+});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+</body>
+</html>
